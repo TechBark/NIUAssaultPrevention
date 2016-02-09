@@ -7,10 +7,42 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:screenOrientation="portrait"
+    android:configChanges="keyboardHidden|orientation|screenSize"
     tools:context="org.techbarks.niuassaultprevention.MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="Hello World!"
+        android:id="@+id/textView" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/button1"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="160dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/button2"
+        android:layout_below="@+id/button1"
+        android:layout_alignRight="@+id/button1"
+        android:layout_alignEnd="@+id/button1"
+        android:layout_marginTop="30dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/button3"
+        android:layout_below="@+id/button2"
+        android:layout_alignRight="@+id/button2"
+        android:layout_alignEnd="@+id/button2"
+        android:layout_marginTop="30dp" />
 </RelativeLayout>
