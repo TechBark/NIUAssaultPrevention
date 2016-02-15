@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Notes:
+Page ID's start at 1 as 0 may / may not be reserved for the starting screen.
+It is implied that every screen will always have a back button, so no need to require that in this layout.
+-->
+<content>
+    <title type="text">NIU Assault Prevention App - Page Layout</title>
+    <updated></updated>
+    <page>
+        <id>1</id>
+        <question>Test Page 1?</question>
+        <description></description>
+        <button>
+            <linkTo>2</linkTo>
+            <text>Test link to 2</text>
+        </button>
+        <button>
+            <linkTo>3</linkTo>
+            <text>Test link to 3</text>
+        </button>
+    </page>
+    <page>
+        <id>2</id>
+        <question>Test Page 2?</question>
+        <description>Testing a description</description>
+        <button>
+            <linkTo>1</linkTo>
+            <text>Test link to 1</text>
+        </button>
+        <button>
+            <linkTo>3</linkTo>
+            <text>Test link to 3</text>
+        </button>
+    </page>
+    <page>
+        <id>3</id>
+        <question>Test Page 3?</question>
+        <description></description>
+        <button>
+            <linkTo>1</linkTo>
+            <text>Test link to 1</text>
+        </button>
+        <button>
+            <linkTo>2</linkTo>
+            <text>Test link to 2</text>
+        </button>
+    </page>
+</content>
