@@ -18,7 +18,7 @@ public class ContentXmlParser {
     private static final String ns = null;
 
     // Builds up the reader and handles it after processing is complete.
-    public List parse(InputStream in) throws XmlPullParserException, IOException {
+    public List<Page> parse(InputStream in) throws XmlPullParserException, IOException {
         try {
             XmlPullParser parser = Xml.newPullParser();
             parser.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false);
@@ -48,23 +48,6 @@ public class ContentXmlParser {
             }
         }
         return entries;
-    }
-
-    // This class represents a single page in the XML feed.
-    public static class Page {
-        public final Integer pageID;
-        public final String question;
-        public final String description;
-        //List of buttons on this page
-        //Format: <pageID to link to, description text>
-        public final List<Pair<Integer,String>> button;
-
-        private Page(Integer pageID, String question, String description, List<Pair<Integer,String>> button) {
-            this.pageID = pageID;
-            this.question = question;
-            this.description = description;
-            this.button = button;
-        }
     }
 
     // Parses the contents of an page. If it encounters a page id, question, description or button
@@ -111,7 +94,7 @@ public class ContentXmlParser {
             text = readText(parser);
         }
         parser.require(XmlPullParser.END_TAG, ns, "button");
-        return new Pair(linkTo,text);
+        return new Pair<Integer, String>(linkTo,text);
     }
 
     // Processes the given tag string in the feed.

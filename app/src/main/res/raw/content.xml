@@ -1,16 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 Notes:
-Page ID's start at 1 as 0 may / may not be reserved for the starting screen.
+Page ID 0 is loaded in on first view.
 It is implied that every screen will always have a back button, so no need to require that in this layout.
 -->
 <content>
     <title type="text">NIU Assault Prevention App - Page Layout</title>
-    <updated></updated>
+    <updated>DateTime HERE</updated>
+    <page>
+        <id>0</id>
+        <question>Test Page 0?</question>
+        <description>0</description>
+        <button>
+            <linkTo>1</linkTo>
+            <text>Test link to 2</text>
+        </button>
+        <button>
+            <linkTo>3</linkTo>
+            <text>Test link to 3</text>
+        </button>
+    </page>
     <page>
         <id>1</id>
         <question>Test Page 1?</question>
-        <description></description>
+        <description> </description>
         <button>
             <linkTo>2</linkTo>
             <text>Test link to 2</text>
@@ -36,7 +49,7 @@ It is implied that every screen will always have a back button, so no need to re
     <page>
         <id>3</id>
         <question>Test Page 3?</question>
-        <description></description>
+        <description> </description>
         <button>
             <linkTo>1</linkTo>
             <text>Test link to 1</text>
